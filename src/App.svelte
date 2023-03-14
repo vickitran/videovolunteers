@@ -68,7 +68,7 @@ let medTick = median(ticks)
 </div>
 <div class = "scale-container"> 
 		<p style="display: inline-block;">1</p>
-    <p style="display: inline-block;  margin: 0 25.5%;">220</p>
+    <p style="display: inline-block;  margin: 0 35%;">220</p>
 </div>
 
 <div class="row">
@@ -144,7 +144,7 @@ let medTick = median(ticks)
     
     <!-- bar chart -->
     <div style="text-align:center; margin-top:50px " bind:clientWidth={width}>
-    <h2>Types of Issues in the Community</h2>
+    <h3>Types of Issues in the Community</h3>
     <svg width={chartWidth} height={chartHeight} style="margin-top:20px">
 
     <AxisX {chartHeight} {xScale} {chart} xTicks={[30,40,50,60,70,80,90,100,110]}/>
@@ -153,9 +153,9 @@ let medTick = median(ticks)
     </svg>
     </div>
 
-    <div style="text-align:center; margin-top:10px; margin-right:100px" bind:clientWidth={width}>
+    <div style="text-align:center; margin-top:10px" bind:clientWidth={width}>
        <div style="float: left; width:60% "> <h3>Groups Affected</h3>
-           <svg width={chartWidth} height={chartHeight} style="margin-top: 20px;margin-left:60px">
+           <svg width={chartWidth} height={chartHeight} style="margin-top: 20px;">
 
     <AxisX {chartHeight} {xScale} {chart} xTicks={[30,40,50,60,70]}/>
     <AxisY {yScale} {chart} yLabels={['Children',
@@ -177,7 +177,7 @@ let medTick = median(ticks)
  '']}/>
     <Barchart {chartWidth} {chart} {xScale} {yScale} barWidths={affectedgroups}/>
     </svg></div>
-        <div style="float: left; margin-left:50px"><h3>No. Individuals (Sample Size:{peopleaffectedsamplesize})</h3>{#if peopleaffected}<p class="number">{peopleaffected}</p>{:else}<p> --- </p>{/if}</div>
+        <div style="float: left; margin-left:40px"><h3>No. Individuals (Sample Size:{peopleaffectedsamplesize})</h3>{#if peopleaffected}<p class="number">{peopleaffected}</p>{:else}<p> --- </p>{/if}</div>
     </div>
 
 
@@ -207,12 +207,12 @@ let medTick = median(ticks)
 }
 h1 {
   
-  font-size:300%;
+  font-size:180%;
   text-align: center;
   padding-left:50px;
 }
 h2 {
-  font-size:150%;
+  font-size:90%;
   text-align: center;
 }
 h3 {
@@ -239,14 +239,12 @@ h3 {
   }
   .numberbox {
     margin-top: 30px;
-    margin-left: 30px;
-    margin-right:30px;
     height: 20px;
     width:200px;
     text-align:center;
   }
   .number{
-    font-size: 250%;
+    font-size: 150%;
   }
   .header {
     font-size: 90%;
